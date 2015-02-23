@@ -20,10 +20,11 @@ Your application should be easy to set up and should run on either Linux or Mac 
 2. Pull the code to your local system.
 3. Verify that you're using the correct Ruby and Rails versions.
 4. Run "Bundle" to setup the appropriate gems.
-5. Startup the rails server by running "bundle exec rails s"
-6. Access the site at "http://localhost:3000"
-7. On the displayed screen select a file then select the upload button.
-8. See "TaDa" appear.
+5. Run "bundle exec db:migrate" to setup the database.
+6. Startup the rails server by running "bundle exec rails s"
+7. Access the site at "http://localhost:3000"
+8. On the displayed screen select a file then select the upload button.
+9. See "TaDa" appear.
 
 ## Thoughts
 This code sample has no testing to speak of. It is just a quick solution.
