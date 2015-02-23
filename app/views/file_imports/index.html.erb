@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing File Imports</h1>
+
+<table>
+  <tbody>
+    <% @file_imports.each do |file_import| %>
+      <tr>
+        <td>
+        <%= "Imported on #{file_import.created_at.strftime('%A, %b %d')} at #{file_import.created_at.strftime('%I:%M:%S %p')}" %>
+        </td>
+        </tr>
+      <tr>
+        <td>
+        <%= "-- Total value imported was: #{file_import.total}" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= form_tag( import_file_imports_path, multipart: true) do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Upload" %>
+<% end %>
